@@ -14,10 +14,6 @@ engine = pyttsx3.init()
 newsapi = "<your news api>"
 
 
-def speak_old(text):
-    engine.say(text)  
-    engine.runAndWait()
-
 def speak(text):
     tts = gTTS(text)
     tts.save('temp.mp3') 
@@ -40,13 +36,13 @@ def speak(text):
 
 
 def aiProcess(command):
-    client = OpenAI(api_key="your openai API",
+    client = OpenAI(api_key="your_openai_API",
     )
 
     completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": "You are a virtual assistant named jarvis skilled in general tasks like Alexa and Google Cloud. Reply in short."},
+        {"role": "system", "content": "You are a virtual assistant named friday skilled in general tasks like Alexa and Google Cloud. Reply in short."},
         {"role": "user", "content": command}
     ]
     )
@@ -61,7 +57,6 @@ def processCommand(c):
         "open gmail": "https://mail.google.com/",
         "open linkedin": "https://linkedin.com",
         "open whatsapp": "https://web.whatsapp.com",
-        "open edx": "https://home.edx.org"
     }
 
     for command, url in commands.items():
@@ -101,7 +96,7 @@ def processCommand(c):
         
 
 if __name__ == "__main__":
-    speak("Initializing Jarvis....")
+    speak("Initializing Friday....")
     while True:
         
         # Listen for the wake word "jarvis"
@@ -117,12 +112,12 @@ if __name__ == "__main__":
 
             word = r.recognize_google(audio)
 
-            if(word.lower() == "jarvis"):
+            if(word.lower() == "friday"):
                 speak("Ya")
 
                 # Listen for command
                 with sr.Microphone() as source:
-                    print("jarvis Active...")
+                    print("friday Active...")
                     audio = r.listen(source, timeout=10, phrase_time_limit=3)
                     command = r.recognize_google(audio)
 
