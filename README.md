@@ -1,5 +1,5 @@
 # Friday
-Automated Voice AI bot
+<h2>Automated Voice AI bot</h2>
 
 ~ Open main.py and run it
 ~ The bot will reply when you call its name "Friday".
