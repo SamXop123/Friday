@@ -8,3 +8,10 @@
 ~ Add music of your own choice in music_library.py 
 
 % Thanks for using %
+
+
+#### Future Scope:
+To deploy it on the web and enhance the user experience.
+
+#### Collaboration:
+Feel free to fork the repo and create pull requests!
