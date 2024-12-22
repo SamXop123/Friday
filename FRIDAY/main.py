@@ -19,7 +19,7 @@ def speak(text):
     tts = gTTS(text)
     tts.save('temp.mp3') 
 
-    # Initialize Pygame mixer
+    # Initialize
     pygame.mixer.init()
 
     # Load the MP3 file
@@ -59,6 +59,7 @@ def get_current_city():
     data = response.json()
     return data.get('city', 'Unknown')
 
+# Process the commands
 def processCommand(c):
     print(c)
     commands = {
