@@ -123,7 +123,7 @@ if __name__ == "__main__":
     speak("Initializing Friday....")
     while True:
         
-        # Listen for the wake word "jarvis"
+        # Listen for the wake word "friday"
         # obtain audio from the microphone
         r = sr.Recognizer()
          
